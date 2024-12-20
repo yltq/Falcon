@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/main_background"
+    android:paddingTop="@dimen/status_bar_height"
+    tools:context=".activity.MainActivity">
+
+    <com.spotlight.falcon_ui.ui.FalconTopBarView
+        android:id="@+id/main_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/main_bottom_group"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_top_bar"
+        app:layout_constraintVertical_weight="1">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/main_center_unConnect"
+            android:gravity="center"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:text="@string/main_unlock"
+                android:layout_height="wrap_content"/>
+
+            <FrameLayout
+                android:id="@+id/main_center_start_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_marginTop="24dp"
+                    android:src="@mipmap/main_center_falcon_bg"
+                    android:adjustViewBounds="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/main_center_start"
+                    android:layout_width="170dp"
+                    android:layout_marginTop="200dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/main_center_start"
+                    android:layout_height="wrap_content"/>
+
+            </FrameLayout>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/main_center_connecting"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/main_connecting_top_name"
+                android:layout_width="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:text="@string/main_unlocking"
+                android:layout_height="wrap_content"/>
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/main_connecting_animation"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                android:scaleType="centerInside"
+                android:layout_marginTop="24dp"
+                app:lottie_imageAssetsFolder="mainconnect/images"
+                app:lottie_fileName="mainconnect/data.json" />
+
+            <androidx.legacy.widget.Space
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:src="@mipmap/main_connecting_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/main_center_gesture"
+                android:textSize="12dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="33dp"
+                android:text="@string/main_connecting"
+                android:textColor="@color/c_FFFEFD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/main_center_connected"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/main_ip"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:text="8.8.8.8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/main_connect_time"
+                android:textColor="@color/white"
+                android:textSize="40dp"
+                android:textStyle="bold"
+                android:text="00:00:00"
+                android:layout_marginTop="28dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:textColor="@color/white"
+                android:layout_marginTop="8dp"
+                android:text="@string/main_connect_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <FrameLayout
+                android:id="@+id/main_center_btn_disconnect"
+                android:layout_marginTop="47dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="146dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/main_center_disconnect"
+                    android:layout_height="142dp"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:textSize="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_gravity="center_horizontal|center"
+                    android:text="@string/main_disconnect"
+                    android:textColor="@color/c_FF8D04"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </FrameLayout>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </FrameLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/main_bottom_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/main_bottom"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingTop="38dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/main_location"
+            android:textColor="@color/c_FFC7C7CC"
+            android:textSize="16dp" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/main_bottom_location"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingTop="14dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="14dp">
+
+            <com.spotlight.falcon_ui.ui.FalconCountryCircleView
+                android:id="@+id/main_location_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/main_location_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_weight="1"
+                android:textColor="@color/c_1C1C1E"
+                android:text="@string/disposition_auto"
+                android:singleLine="true"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@mipmap/main_next" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/main_bottom_bps_group"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/main_bottom_bps_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="25dp"
+            android:paddingEnd="25dp"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@mipmap/main_bottom_bps_upload" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/main_bottom_bps_download"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:singleLine="true"
+                    android:text="0bps"
+                    android:textColor="#FBFBFB"
+                    android:textSize="13dp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:singleLine="true"
+                    android:text="@string/main_download"
+                    android:textColor="#DEDEDE"
+                    android:textSize="12dp" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.legacy.widget.Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@mipmap/main_bottom_bps_download" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/main_bottom_bps_upload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:singleLine="true"
+                    android:text="0bps"
+                    android:textColor="#FBFBFB"
+                    android:textSize="13dp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:singleLine="true"
+                    android:text="@string/main_upload"
+                    android:textColor="#DEDEDE"
+                    android:textSize="12dp" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

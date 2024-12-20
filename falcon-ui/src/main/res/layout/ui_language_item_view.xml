@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/about_us_bg"
+    android:paddingStart="12dp"
+    android:paddingEnd="12dp"
+    android:layout_marginTop="24dp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:layout_height="42dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/language_name"
+        android:layout_toStartOf="@+id/language_icon"
+        android:layout_width="match_parent"
+        android:layout_centerVertical="true"
+        android:text="@string/language_eng"
+        android:layout_height="wrap_content" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/language_icon"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/language_select"
+        android:layout_centerVertical="true"
+        android:layout_width="28dp"
+        android:layout_height="28dp"/>
+
+</RelativeLayout>

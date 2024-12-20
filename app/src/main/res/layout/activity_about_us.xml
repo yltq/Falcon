@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/main_background"
+    android:paddingTop="@dimen/status_bar_height"
+    tools:context=".activity.AboutUsActivity">
+
+    <com.spotlight.falcon_ui.ui.FalconTopBarView
+        android:id="@+id/about_us_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        android:padding="12dp"
+        android:gravity="center_horizontal"
+        android:background="@drawable/more_detail_white_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/about_us_top_bar"
+        app:layout_constraintVertical_weight="1"
+        android:orientation="vertical">
+
+        <androidx.legacy.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="72dp"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:src="@mipmap/about_us_icon"
+            android:layout_width="68dp"
+            android:layout_height="68dp"/>
+
+        <androidx.legacy.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="69dp"/>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/about_us_version_group"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:background="@drawable/about_us_bg"
+                    android:layout_height="42dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:textColor="#9A9A9A"
+                        android:textSize="14dp"
+                        android:text="@string/about_us_version"
+                        android:layout_height="wrap_content"/>
+
+                    <androidx.legacy.widget.Space
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/about_us_version"
+                        android:layout_width="wrap_content"
+                        android:textColor="#1C1C1E"
+                        android:textSize="14dp"
+                        android:text="V1.0.0"
+                        android:layout_height="wrap_content"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/about_us_colophon_group"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="13dp"
+                    android:paddingBottom="13dp"
+                    android:background="@drawable/about_us_bg"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:textColor="#9A9A9A"
+                        android:textSize="14dp"
+                        android:text="@string/about_us_colophon"
+                        android:layout_height="wrap_content"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/about_us_colophon"
+                        android:layout_width="wrap_content"
+                        android:textColor="#1C1C1E"
+                        android:textSize="14dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/more_detail_version_details"
+                        android:layout_height="wrap_content"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/about_us_group"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingTop="13dp"
+                    android:paddingBottom="13dp"
+                    android:paddingEnd="16dp"
+                    android:background="@drawable/about_us_bg"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:textColor="#9A9A9A"
+                        android:textSize="14dp"
+                        android:text="@string/about_us"
+                        android:layout_height="wrap_content"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/about_us"
+                        android:layout_width="wrap_content"
+                        android:textColor="#1C1C1E"
+                        android:textSize="14dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/more_detail_about_us"
+                        android:layout_height="wrap_content"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/about_us_policy"
+                android:layout_width="0dp"
+                android:textSize="14dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="@string/more_detail_privacy"
+                android:textColor="@color/c_23BC8E"
+                android:layout_height="match_parent"/>
+
+            <androidx.legacy.widget.Space
+                android:layout_width="40dp"
+                android:layout_height="match_parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/about_us_terms"
+                android:layout_width="0dp"
+                android:textSize="14dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="@string/more_detail_terms"
+                android:textColor="@color/c_23BC8E"
+                android:layout_height="match_parent"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.legacy.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

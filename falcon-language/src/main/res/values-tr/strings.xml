@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name" translatable="false">Falcon VPN</string>
+    <string name="disposition_auto" translatable="false">Best Node - Auto Match</string>
+    <string name="disposition_game" translatable="false">Game-Low-latency servers</string>
+    <string name="main_unlock">Güvenli ve hızlı bir interneti açmak için dokunun</string>
+    <string name="main_unlocking">Neredeyse hazır, sizi güvenli bir şekilde çevrimiçi yapıyoruz!</string>
+    <string name="main_location">Sunucu</string>
+    <string name="main_download">İndirme</string>
+    <string name="main_upload">Yükleme</string>
+    <string name="main_disconnect">BAĞLANTIYI KES</string>
+    <string name="main_connect_time">Bağlantı Süresi</string>
+    <string name="main_connect_duration">Bağlantı Süresi</string>
+    <string name="main_connecting">BAĞLANIYOR...</string>
+    <string name="main_disconnecting">BAĞLANTI KESİLİYOR...</string>
+    <string name="main_permission_not_granted">VPN İzni Verilmedi</string>
+    <string name="jr_ip">IP</string>
+    <string name="jr_title">Sonuç</string>
+    <string name="web_policy">Gizlilik Politikası</string>
+    <string name="web_terms">Hizmet Şartları</string>
+    <string name="more_detail_no_email">Şu anda bir e-posta uygulaması yok</string>
+    <string name="more_detail_title">Daha Fazla</string>
+    <string name="more_detail_conn_pre">Bağlantı ve Tercihler</string>
+    <string name="more_detail_delay_test">Gecikme Testi</string>
+    <string name="more_detail_automatic">Otomatik Bağlan</string>
+    <string name="more_detail_vpn_automatic">Uygulama başladığında, VPN otomatik olarak bağlanacak.</string>
+    <string name="more_detail_language">Dil</string>
+    <string name="more_detail_support">Destek</string>
+    <string name="more_detail_share">Arkadaşlarla Paylaş</string>
+    <string name="more_detail_evaluate_us">Bizi Oyla</string>
+    <string name="more_detail_contact_us">Bize Ulaşın</string>
+    <string name="more_detail_about">Hakkında</string>
+    <string name="more_detail_privacy">Gizlilik Politikası</string>
+    <string name="more_detail_terms">Hizmet Şartları</string>
+    <string name="more_detail_about_us">Ağ güvenliğine odaklanmış bir ekip olarak, ihtiyaçlarınızı karşılamak için sürekli geliştirme yaparken, verimli ve güvenli VPN hizmetleri sağlamayı taahhüt ediyoruz.</string>
+    <string name="more_detail_version_details">İlk sürüm, gizliliğinizi ve çevrimiçi güvenliğinizi korumak için kararlı ve güvenli VPN bağlantıları sunar.</string>
+    <string name="about_us_version">Sürüm</string>
+    <string name="about_us_colophon">Sürüm Ayrıntıları</string>
+    <string name="about_us">Hakkımızda</string>
+    <string name="language_eng">İngilizce</string>
+    <string name="language_save">Kaydet</string>
+    <string name="disposition_connecting">Bağlanıyor... Lütfen daha sonra tekrar deneyin</string>
+    <string name="disposition_disconnecting">Bağlantı kesiliyor... Lütfen daha sonra tekrar deneyin</string>
+<!--    <string name="disposition_time_out">Zaman aşımı</string>-->
+    <string name="disposition_server_empty">Veri Yok</string>
+    <string name="disposition_empty">Sunucu bulunamadı, yenilemek için dokunun</string>
+    <string name="disposition_disconnect">VPN bağlantısını kesmek istiyor musunuz?</string>
+    <string name="disconnect_btn">Bağlantıyı Kes</string>
+    <string name="cancel_btn">İptal</string>
+    <string name="dialog_loading">Yükleniyor...</string>
+    <string name="dialog_region_limit_title">Bölgesel Kısıtlama</string>
+    <string name="dialog_no_net_available">Ağ mevcut değil</string>
+    <string name="dialog_no_net">Ağ mevcut değil. Lütfen bağlantınızı kontrol edin.</string>
+    <string name="dialog_region_limit">Bu hizmet bölgenizde kısıtlanmıştır.</string>
+    <string name="dialog_confirm">onayla</string>
+    <string name="dialog_ok">TAMAM</string>
+    <string name="test_text">Gecikme test ediliyor... Hemen</string>
+    <string name="connect_fail">Bağlantı Başarısız</string>
+    <string name="possible_cause">Olası nedenler:</string>
+    <string name="connection_failed_retry">Tekrar Dene</string>
+    <string name="connection_failed_sure">Tamam</string>
+    <string name="connection_failed_feedback">geri bildirim</string>
+    <string name="connection_fail_text">1. Kararsız ağ. Lütfen bağlantınızı kontrol edin.\n2. Sunucu sorunu. Lütfen daha sonra tekrar deneyin.\n3. Bilinmeyen neden. Lütfen teknik ekibimize bildirin.</string>
+</resources>

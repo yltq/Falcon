@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name" translatable="false">Falcon VPN</string>
+    <string name="disposition_auto" translatable="false">Best Node - Auto Match</string>
+    <string name="disposition_game" translatable="false">Game-Low-latency servers</string>
+    <string name="main_unlock">Appuyez pour débloquer un internet sécurisé et rapide</string>
+    <string name="main_unlocking">Presque fini, connexion sécurisée en cours !</string>
+    <string name="main_location">Serveur</string>
+    <string name="main_download">Télécharger</string>
+    <string name="main_upload">Téléverser</string>
+    <string name="main_disconnect">DÉCONNECTER</string>
+    <string name="main_connect_time">Temps de connexion</string>
+    <string name="main_connect_duration">Durée de connexion</string>
+    <string name="main_connecting">CONNEXION EN COURS...</string>
+    <string name="main_disconnecting">DÉCONNEXION EN COURS...</string>
+    <string name="main_permission_not_granted">Permission VPN non accordée</string>
+    <string name="jr_ip">IP</string>
+    <string name="jr_title">Résultat</string>
+    <string name="web_policy">Politique de confidentialité</string>
+    <string name="web_terms">Conditions d\'utilisation</string>
+    <string name="more_detail_no_email">Aucune application de messagerie disponible</string>
+    <string name="more_detail_title">Plus</string>
+    <string name="more_detail_conn_pre">Connexion et Préférences</string>
+    <string name="more_detail_delay_test">Test de latence</string>
+    <string name="more_detail_automatic">Connexion automatique</string>
+    <string name="more_detail_vpn_automatic">Au démarrage de l\'application, le VPN se connectera automatiquement.</string>
+    <string name="more_detail_language">Langue</string>
+    <string name="more_detail_support">Support</string>
+    <string name="more_detail_share">Partager avec des amis</string>
+    <string name="more_detail_evaluate_us">Évaluez-nous</string>
+    <string name="more_detail_contact_us">Contactez-nous</string>
+    <string name="more_detail_about">À propos</string>
+    <string name="more_detail_privacy">Politique de confidentialité</string>
+    <string name="more_detail_terms">Conditions d\'utilisation</string>
+    <string name="more_detail_about_us">En tant qu\'équipe axée sur la sécurité réseau, nous promettons de fournir des services VPN efficaces et sécurisés tout en continuant à nous améliorer pour répondre à vos besoins.</string>
+    <string name="more_detail_version_details">Première version, offrant des connexions VPN stables et sécurisées pour protéger votre vie privée et votre sécurité en ligne.</string>
+    <string name="about_us_version">Version</string>
+    <string name="about_us_colophon">Détails de la version</string>
+    <string name="about_us">À propos de nous</string>
+    <string name="language_eng">Anglais</string>
+    <string name="language_save">Enregistrer</string>
+    <string name="disposition_connecting">Connexion en cours... Veuillez réessayer plus tard</string>
+    <string name="disposition_disconnecting">Déconnexion en cours... Veuillez réessayer plus tard</string>
+<!--    <string name="disposition_time_out">Temps écoulé</string>-->
+    <string name="disposition_server_empty">Aucune donnée</string>
+    <string name="disposition_empty">Aucun serveur trouvé, appuyez pour actualiser</string>
+    <string name="disposition_disconnect">Voulez-vous vous déconnecter du VPN ?</string>
+    <string name="disconnect_btn">Déconnecter</string>
+    <string name="cancel_btn">Annuler</string>
+    <string name="dialog_loading">Chargement...</string>
+    <string name="dialog_region_limit_title">Restriction régionale</string>
+    <string name="dialog_no_net_available">Aucun réseau disponible</string>
+    <string name="dialog_no_net">Aucun réseau disponible. Veuillez vérifier votre connexion.</string>
+    <string name="dialog_region_limit">Ce service est restreint dans votre région.</string>
+    <string name="dialog_confirm">Confirmer</string>
+    <string name="dialog_ok">OK</string>
+    <string name="test_text">Test de la latence... Tout de suite</string>
+    <string name="connect_fail">Échec de la connexion</string>
+    <string name="possible_cause">Causes possibles :</string>
+    <string name="connection_failed_retry">Réessayer</string>
+    <string name="connection_failed_sure">D\'accord</string>
+    <string name="connection_failed_feedback">Retour d\'information</string>
+    <string name="connection_fail_text">1. Réseau instable. Veuillez vérifier votre connexion.\n2. Problème de serveur. Veuillez réessayer plus tard.\n3. Raison inconnue. Veuillez signaler à notre équipe technique.</string>
+</resources>

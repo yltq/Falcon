@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name" translatable="false">Falcon VPN</string>
+    <string name="disposition_auto" translatable="false">Best Node - Auto Match</string>
+    <string name="disposition_game" translatable="false">Game-Low-latency servers</string>
+    <string name="main_unlock">Tap to unlock a secure and fast internet</string>
+    <string name="main_unlocking">Almost there, getting you online safely!</string>
+    <string name="main_location">Server</string>
+    <string name="main_download">Download</string>
+    <string name="main_upload">Upload</string>
+    <string name="main_disconnect">DISCONNECT</string>
+    <string name="main_connect_time">Connection Time</string>
+    <string name="main_connect_duration">Connection Duration</string>
+    <string name="main_connecting">CONNECTING...</string>
+    <string name="main_disconnecting">DISCONNECTING...</string>
+    <string name="main_permission_not_granted">VPN Permission Not Granted</string>
+    <string name="jr_ip">IP</string>
+    <string name="jr_title">Result</string>
+    <string name="web_policy">Privacy Policy</string>
+    <string name="web_terms">Terms of Service</string>
+    <string name="more_detail_no_email">Currently there is no email app</string>
+    <string name="more_detail_title">More</string>
+    <string name="more_detail_conn_pre">Connection &amp; Preferences</string>
+    <string name="more_detail_delay_test">Latency Test</string>
+    <string name="more_detail_automatic">Auto Connect</string>
+    <string name="more_detail_vpn_automatic">When the app starts, the VPN will connect automatically.</string>
+    <string name="more_detail_language">Language</string>
+    <string name="more_detail_support">Support</string>
+    <string name="more_detail_share">Share with Friends</string>
+    <string name="more_detail_evaluate_us">Rate Us</string>
+    <string name="more_detail_contact_us">Contact Us</string>
+    <string name="more_detail_about">About</string>
+    <string name="more_detail_privacy">Privacy Policy</string>
+    <string name="more_detail_terms">Terms of Service</string>
+    <string name="more_detail_about_us">As a team focused on network security, we promise to provide efficient and secure VPN services while continuously improving to meet your needs.</string>
+    <string name="more_detail_version_details">First release, offering stable and secure VPN connections to protect your privacy and online security.</string>
+    <string name="about_us_version">Version</string>
+    <string name="about_us_colophon">Version Details</string>
+    <string name="about_us">About Us</string>
+    <string name="language_eng">English</string>
+    <string name="language_save">Save</string>
+    <string name="disposition_connecting">Connecting... Please try again later</string>
+    <string name="disposition_disconnecting">Disconnecting... Please try again later</string>
+    <string name="disposition_time_out" translatable="false">Time out</string>
+    <string name="disposition_server_empty">No Data</string>
+    <string name="disposition_empty">No servers found, tap to refresh</string>
+    <string name="disposition_disconnect">Do you want to disconnect from the VPN?</string>
+    <string name="disconnect_btn">Disconnect</string>
+    <string name="cancel_btn">Cancel</string>
+    <string name="dialog_loading">Loading...</string>
+    <string name="dialog_region_limit_title">Regional restriction</string>
+    <string name="dialog_no_net_available">No network available</string>
+    <string name="dialog_no_net">No network available. Please check your connection.</string>
+    <string name="dialog_region_limit">This service is restricted in your region.</string>
+    <string name="dialog_confirm">confirm</string>
+    <string name="dialog_ok">OK</string>
+    <string name="test_text">Testing the delay... Right away</string>
+    <string name="connect_fail">Connection Failed</string>
+    <string name="possible_cause">Possible reasons:</string>
+    <string name="connection_failed_retry">Retry</string>
+    <string name="connection_failed_sure">Sure</string>
+    <string name="connection_failed_feedback">feedback</string>
+    <string name="connection_fail_text">1. Unstable network. Please check your connection.\n2. Server issue. Please try again later.\n3. Unknown reason. Please report to our technical team.</string>
+</resources>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/intro_background"
+    tools:context=".activity.IntroductionActivity">
+
+    <androidx.legacy.widget.Space
+        android:id="@+id/intro_space_top"
+        app:layout_constraintVertical_weight="270"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/intro_logo"
+        android:layout_height="0dp"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/intro_logo"
+        android:layout_width="86dp"
+        android:src="@mipmap/intro_logo"
+        app:layout_constraintBottom_toTopOf="@+id/intro_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/intro_space_top"
+        android:layout_height="86dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/intro_title"
+        android:layout_width="wrap_content"
+        android:text="@string/app_name"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/inknut_antiqua"
+        app:layout_constraintBottom_toTopOf="@+id/intro_space_bottom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/intro_logo"
+        android:textColor="@color/c_FF9004"
+        android:layout_height="wrap_content"/>
+
+    <androidx.legacy.widget.Space
+        android:id="@+id/intro_space_bottom"
+        app:layout_constraintVertical_weight="286"
+        android:layout_width="match_parent"
+        app:layout_constraintBottom_toTopOf="@+id/intro_line"
+        app:layout_constraintTop_toBottomOf="@+id/intro_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="0dp"/>
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/intro_line"
+        android:layout_width="276dp"
+        android:layout_height="6dp"
+        android:layout_marginBottom="54dp"
+        android:indeterminate="false"
+        android:progress="0"
+        android:max="100"
+        app:indicatorColor="@color/c_FF8005"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:trackColor="@color/c_57CDC6C6"
+        app:trackCornerRadius="8dp"
+        app:trackThickness="8dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
