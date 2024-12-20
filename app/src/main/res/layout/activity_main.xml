@@ -85,7 +85,7 @@
             <com.airbnb.lottie.LottieAnimationView
                 android:id="@+id/main_connecting_animation"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="309dp"
                 app:lottie_autoPlay="true"
                 app:lottie_loop="true"
                 android:scaleType="centerInside"
@@ -93,7 +93,7 @@
                 app:lottie_imageAssetsFolder="mainconnect/images"
                 app:lottie_fileName="mainconnect/data.json" />
 
-            <androidx.legacy.widget.Space
+            <Space
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"/>
@@ -275,7 +275,7 @@
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 
-            <androidx.legacy.widget.Space
+            <Space
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1" />

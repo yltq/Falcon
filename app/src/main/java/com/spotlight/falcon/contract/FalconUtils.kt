@@ -5,6 +5,7 @@ import android.content.Context
 import android.text.TextUtils
 import android.util.Base64
 import android.webkit.WebView
+import androidx.appcompat.app.AppCompatActivity
 import com.github.shadowsocks.preference.DataStore
 import com.spotlight.falcon.BuildConfig
 import com.spotlight.falcon.contract.FalconApplication.Companion.logFalcon
@@ -18,6 +19,7 @@ import okhttp3.Response
 import org.json.JSONArray
 import org.json.JSONObject
 import java.io.IOException
+import java.util.Locale
 
 class FalconUtils(val context: Context) {
     fun checkFalconProcess(loadFalconEnable: (Boolean) -> Unit) {
@@ -33,6 +35,16 @@ class FalconUtils(val context: Context) {
         processJson(DataStore.falconStorageVPN)
         falconCountryCode()
         falconServer()
+    }
+
+    fun setLocale(context: AppCompatActivity, languageCode: String) {
+        val resource = context.resources
+        val config = resource.configuration
+        val locale = Locale(languageCode)
+        config.setLocale(locale)
+        resource.updateConfiguration(config, resource.displayMetrics)
+        context.createConfigurationContext(config)
+        FalconApplication.falconAPP.applicationContext.createConfigurationContext(config)
     }
 
     fun finishInFalse() {
@@ -173,7 +185,7 @@ class FalconUtils(val context: Context) {
                                 val resultStr = response.body?.string()
                                 if (resultStr?.isNotEmpty() == true && resultStr.length > 19) {
                                     val result = processString(resultStr) ?: ""
-                                    "load server is $result".logFalcon()
+//                                    "load server is $result".logFalcon()
                                     DataStore.falconStorageVPN = result
                                     processJson(result)
                                 }

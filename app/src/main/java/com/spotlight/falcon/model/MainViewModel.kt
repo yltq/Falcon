@@ -232,6 +232,8 @@ class MainViewModel(private var activity: WeakReference<MainActivity>?, private 
                 falconConnect = false
                 if (falconConnectService == BaseService.State.Connecting) {
                     falconConnectService = state
+                    falconEndCount()
+                    uiLiveData.postValue("disconnected")
                     //连接失败
                     activity?.get()?.apply {
                         FalconApplication.falconAPP.falconUIDialog.falconConnectionFail(this, retry = {

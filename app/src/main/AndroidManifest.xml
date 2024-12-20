@@ -11,34 +11,42 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Falcon"
+        android:localeConfig="@xml/locales_config"
         tools:targetApi="31">
         <activity
             android:name=".web.FalconWebActivity"
             android:exported="false"
+            android:configChanges="locale"
             android:screenOrientation="portrait" />
         <activity
             android:name=".activity.LanguageActivity"
             android:exported="false"
+            android:configChanges="locale"
             android:screenOrientation="portrait" />
         <activity
             android:name=".activity.AboutUsActivity"
             android:exported="false"
+            android:configChanges="locale"
             android:screenOrientation="portrait" />
         <activity
             android:name=".activity.MoreDetailActivity"
             android:exported="false"
+            android:configChanges="locale"
             android:screenOrientation="portrait" />
         <activity
             android:name=".activity.JoinResultActivity"
             android:exported="false"
+            android:configChanges="locale"
             android:screenOrientation="portrait" />
         <activity
             android:name=".activity.DispositionActivity"
             android:exported="false"
+            android:configChanges="locale"
             android:screenOrientation="portrait" />
         <activity
             android:name=".activity.IntroductionActivity"
             android:exported="true"
+            android:configChanges="locale"
             android:launchMode="singleTop"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -50,6 +58,7 @@
         <activity
             android:name=".activity.MainActivity"
             android:exported="false"
+            android:configChanges="locale"
             android:screenOrientation="portrait" />
     </application>
 

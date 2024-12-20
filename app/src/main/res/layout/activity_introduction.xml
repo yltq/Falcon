@@ -7,7 +7,7 @@
     android:background="@mipmap/intro_background"
     tools:context=".activity.IntroductionActivity">
 
-    <androidx.legacy.widget.Space
+    <Space
         android:id="@+id/intro_space_top"
         app:layout_constraintVertical_weight="270"
         android:layout_width="match_parent"
@@ -40,7 +40,7 @@
         android:textColor="@color/c_FF9004"
         android:layout_height="wrap_content"/>
 
-    <androidx.legacy.widget.Space
+    <Space
         android:id="@+id/intro_space_bottom"
         app:layout_constraintVertical_weight="286"
         android:layout_width="match_parent"

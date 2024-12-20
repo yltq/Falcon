@@ -35,6 +35,6 @@ class FalconTopBarView(var mContext: Context, val mAttr: AttributeSet?): LinearL
     }
 
     fun hideRightIcon(b: Boolean) {
-        binding.topBarRightIcon.visibility = if (b) View.GONE else View.VISIBLE
+        binding.topBarRightIcon.visibility = if (b) View.INVISIBLE else View.VISIBLE
     }
 }

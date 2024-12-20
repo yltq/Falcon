@@ -1,12 +1,14 @@
 package com.spotlight.falcon_ui.ui
 
 import android.animation.ObjectAnimator
+import android.animation.ValueAnimator
 import android.app.Dialog
 import android.content.Context
 import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
 import androidx.appcompat.app.AlertDialog
+import com.airbnb.lottie.LottieDrawable.INFINITE
 import com.spotlight.falcon_ui.R
 import com.spotlight.falcon_ui.databinding.UiDisconnectDialogViewBinding
 import com.spotlight.falcon_ui.databinding.UiDispositionConnectFailDialogViewBinding
@@ -44,6 +46,10 @@ class FalconUIDialog() {
         val dialog = AlertDialog.Builder(context).setCancelable(false).create()
         val view = falconDialogView(context, "disconnect")?:return null
         val binding = UiDisconnectDialogViewBinding.bind(view)
+        binding.disconnectTitle.text = context.getString(com.spotlight.falcon_language.R.string.disconnect_btn)
+        binding.disconnectText.text = context.getString(com.spotlight.falcon_language.R.string.disposition_disconnect)
+        binding.disconnectBtn.text = context.getString(com.spotlight.falcon_language.R.string.disconnect_btn)
+        binding.cancelBtn.text = context.getString(com.spotlight.falcon_language.R.string.cancel_btn)
         binding.disconnectBtn.setOnClickListener {
             disconnect()
             dialog.dismiss()
@@ -68,13 +74,17 @@ class FalconUIDialog() {
 
         val animator = ObjectAnimator.ofFloat(binding.loadingIcon, "rotation", 0f, 360f)
         animator.duration = 1000
+        animator.repeatMode = ValueAnimator.RESTART
+        animator.repeatCount = INFINITE
         animator.start()
 
         dialog.setView(binding.root)
         dialog.show()
         val width = dpToPx(context, 154f).roundToInt()
+        val height = dpToPx(context, 165f).roundToInt()
         val params = dialog.window?.attributes
         params?.width = width
+        params?.height = height
         dialog.window?.attributes = params
         dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
         return dialog

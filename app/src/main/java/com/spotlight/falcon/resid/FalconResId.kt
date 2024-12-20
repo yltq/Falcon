@@ -109,6 +109,13 @@ class FalconResId {
         return node
     }
 
+    fun falconClearNode(id: Long) {
+        val p = ProfileManager.getProfile(id)
+        if (p != null) {
+            ProfileManager.delProfile(id)
+        }
+    }
+
     fun falconMainConnectVpn(
         connectType: String = "fast",
         connectNode: DispositionChildNode? = null,
@@ -189,13 +196,7 @@ class FalconResId {
     }
 
     fun setLocale(context: AppCompatActivity, languageCode: String) {
-        val resource = context.resources
-        val config = resource.configuration
-        val locale = Locale(languageCode)
-        config.setLocale(locale)
-        resource.updateConfiguration(config, resource.displayMetrics)
-        context.createConfigurationContext(config)
-        FalconApplication.falconAPP.applicationContext.createConfigurationContext(config)
+        FalconApplication.falconAPP.falconUtils.setLocale(context, languageCode)
     }
 
 }

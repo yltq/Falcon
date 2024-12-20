@@ -119,9 +119,26 @@ class MainActivity : BaseFalconActivity(), FalconGesture, VpnUIGesture {
                 }
 
                 else -> {
-                    binding.mainLocationName.text = if (TextUtils.isEmpty(node?.nodeChildName))
-                        getString(com.spotlight.falcon_language.R.string.disposition_auto) else node?.nodeChildName
-                    binding.mainLocationIcon.initIconRes(node?.nodeParentCode ?: "")
+                    val game = FalconContent.falconServerMap["game"]
+                    val server = FalconContent.falconServerMap["server"]
+                    val notInGame = game.isNullOrEmpty()
+                            || node == null
+                            || (!game.any { it.nodeIp == node?.nodeIp
+                            && it.nodeInFast == node?.nodeInFast && it.nodeChildName == node?.nodeChildName})
+                    val notInServer = server.isNullOrEmpty()
+                            || node == null
+                            || (!server.any { it.nodeIp == node?.nodeIp && it.nodeInFast == node?.nodeInFast && it.nodeChildName == node?.nodeChildName})
+                    if (notInGame && notInServer) {
+                        binding.mainLocationName.text =  getString(com.spotlight.falcon_language.R.string.disposition_auto)
+                        binding.mainLocationIcon.initIconRes("")
+                        if (node != null) {
+                            falconResId.falconClearNode(DataStore.profileId)
+                        }
+                    } else {
+                        binding.mainLocationName.text = if (TextUtils.isEmpty(node?.nodeChildName))
+                            getString(com.spotlight.falcon_language.R.string.disposition_auto) else node?.nodeChildName
+                        binding.mainLocationIcon.initIconRes(node?.nodeParentCode ?: "")
+                    }
                 }
             }
             binding.mainBottomLocation.setOnClickListener {
@@ -258,7 +275,7 @@ class MainActivity : BaseFalconActivity(), FalconGesture, VpnUIGesture {
         binding.mainBottomBpsGroup.visibility = View.GONE
         binding.mainCenterConnected.visibility = View.GONE
         binding.mainCenterGesture.text =
-            getText(com.spotlight.falcon_language.R.string.main_connecting)
+            getString(com.spotlight.falcon_language.R.string.main_connecting)
     }
 
     override fun uiConnected() {
@@ -266,7 +283,12 @@ class MainActivity : BaseFalconActivity(), FalconGesture, VpnUIGesture {
         binding.mainBottomBpsGroup.visibility = View.VISIBLE
         binding.mainCenterUnConnect.visibility = View.GONE
         binding.mainCenterConnecting.visibility = View.GONE
-        binding.mainIp.text = falconResId.falconNowNode()?.nodeIp ?: "8.8.8.8"
+        if (falconResId.falconNowNode()?.nodeInFast == "game") {
+            binding.mainIp.visibility = View.INVISIBLE
+        } else {
+            binding.mainIp.visibility = View.VISIBLE
+            binding.mainIp.text = falconResId.falconNowNode()?.nodeIp ?: "8.8.8.8"
+        }
     }
 
     override fun uiDisconnected() {
@@ -282,7 +304,7 @@ class MainActivity : BaseFalconActivity(), FalconGesture, VpnUIGesture {
         binding.mainBottomBpsGroup.visibility = View.GONE
         binding.mainCenterConnected.visibility = View.GONE
         binding.mainCenterGesture.text =
-            getText(com.spotlight.falcon_language.R.string.main_disconnecting)
+            getString(com.spotlight.falcon_language.R.string.main_disconnecting)
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)

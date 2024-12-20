@@ -32,7 +32,9 @@ class FalconApplication: Application() {
         falconUtils.checkFalconProcess {
             when(it) {
                 false -> falconUtils.finishInFalse()
-                true -> falconUtils.finishInTrue()
+                true -> {
+                    falconUtils.finishInTrue()
+                }
             }
         }
     }

@@ -15,6 +15,7 @@ import com.spotlight.falcon.contract.FalconApplication
 import com.spotlight.falcon.contract.FalconApplication.Companion.logFalcon
 import com.spotlight.falcon.contract.FalconApplication.Companion.toastFalcon
 import com.spotlight.falcon.databinding.ActivityDispositionBinding
+import com.spotlight.falcon.datas.FalconContent
 import com.spotlight.falcon.datas.FalconContent.falconServerMap
 import com.spotlight.falcon.gesture.FalconGesture
 import com.spotlight.falcon.model.BaseFalconActivity
@@ -205,7 +206,7 @@ class DispositionActivity : BaseFalconActivity(), FalconGesture {
 
     private fun dispositionRotate() {
         val animator = ObjectAnimator.ofFloat(binding.dispositionEmptyRotate, "rotation", 0f, 360f)
-        animator.duration = 1000
+        animator.duration = 2000
         animator.start()
     }
 
@@ -218,16 +219,16 @@ class DispositionActivity : BaseFalconActivity(), FalconGesture {
 
                     val type = result.nodeInFast
                     if (type == "fast") {
-                        if (adapterItems.size >= 1 && adapterItems[0].ping > result.nodePing) {
+                        if (adapterItems.size >= 1 && adapterItems[0].ping > result.nodePing && result.nodePing > 0) {
                             adapterItems[0].ping = result.nodePing
                         }
                     } else if (type == "game") {
-                        if (adapterItems.size >= 2 && adapterItems[1].ping > result.nodePing) {
+                        if (adapterItems.size >= 2 && adapterItems[1].ping > result.nodePing && result.nodePing > 0) {
                             adapterItems[1].ping = result.nodePing
                         }
                     } else {
                         adapterItems.find { it.dispositionCountry == result.nodeParentName }?.apply {
-                            if (this.ping > result.nodePing) {
+                            if (this.ping > result.nodePing && result.nodePing > 0) {
                                 this.ping = result.nodePing
                             }
                             this.children.find { it.nodeIp == result.nodeIp }?.apply {
